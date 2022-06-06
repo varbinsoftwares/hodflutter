@@ -21,13 +21,13 @@ class UIElements {
       child: Text(
         labletext,
         style: TextStyle(
-          color: isActive ? Colors.white : Color(0xffd1913c),
+          color: isActive ? Colors.white : Colors.red,
           fontSize: 25,
         ),
       ),
       onPressed: onPressed,
       style: ElevatedButton.styleFrom(
-        primary: isActive ? Color(0xffffd194) : Colors.white,
+        primary: isActive ? Colors.red : Colors.white,
         shape: CircleBorder(), //<-- SEE HERE
         padding: EdgeInsets.all(10),
       ),
