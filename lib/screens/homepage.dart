@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hod/ui/uielements.dart';
 import 'package:hod/screens/songlyrics.dart';
+import 'package:hod/screens/audiobook.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
@@ -76,7 +77,12 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
             uiobj.HomeButtons(
               labletext: "Audio Songs",
-              onPressed: () => {},
+              onPressed: () => {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => AudioSong()),
+                )
+              },
               image: "assets/love-song.png",
             ),
           ],

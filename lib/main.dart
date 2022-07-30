@@ -1,7 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:hod/screens/homepage.dart';
+import 'package:audio_service/audio_service.dart';
+import 'package:get_it/get_it.dart';
+import 'services/service_locator.dart';
+import 'services/audio_handler.dart';
 
-void main() {
+void main() async {
+  getIt.registerSingleton<AudioHandler>(await initAudioService());
+
+  await setupServiceLocator();
   runApp(const MyApp());
 }
 
